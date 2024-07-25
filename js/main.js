@@ -65,8 +65,6 @@ function disableCards() {
 
 function unflipCards() {
   setTimeout(() => {
-		firstCard.classList.remove('flipped');
-		secondCard.classList.remove('flipped');
 		grid.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
 		resetCard();
   }, 500);
