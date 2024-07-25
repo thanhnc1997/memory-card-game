@@ -5,6 +5,12 @@
 	font-family: sans-serif;
 }
 
+h1 {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 16px
+}
+
 .container {
 	max-width: 991px;
 	margin: 0 auto;
@@ -14,13 +20,13 @@
 .grid {
 	display: grid;
 	grid-gap: 4px;
-	grid-template: auto / repeat(8, 1fr);
+	grid-template: auto / repeat(4, 1fr);
 }
 
 .card-inner {
 	padding-top: 100%;
 	position: relative;
-	transition: transform .4s;
+	transition: transform .6s;
   transform-style: preserve-3d;
 }
 
@@ -29,8 +35,20 @@
 }
 
 .card-inner .front {
+	/*
 	background: url(../images/mystery.png) no-repeat center;
 	background-size: cover;
+	*/
+	background: #8CC8FF;
+}
+
+.card-inner .front span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 600;
+	font-size: 24px;
 }
 
 .card-inner .back {
@@ -55,4 +73,19 @@
 	padding-top: 100%;
 	background: lightcoral no-repeat center;
 	background-size: cover;
+}
+
+@media (min-width: 667px) {
+	h1 {
+		font-size: 32px;
+		margin-bottom: 28px;
+	}
+	
+	.card-inner .front span {
+		font-size: 32px;
+	}
+	
+	.grid {
+		grid-template: auto / repeat(8, 1fr);
+	}
 }

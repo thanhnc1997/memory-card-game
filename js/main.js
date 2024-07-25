@@ -17,16 +17,16 @@ function handleData(params) {
 
 function cardGenerator(params) {
 	if (!params) return false;
-	for (let character of params) {
+	for (let i in params) {
 		let item = document.createElement('div');
 		item.classList.add('card');
 		item.innerHTML = `
 		<div class="card-inner">
-			<div class="front image"></div>
-			<div class="back image" style="background-image: url(${character.image})"></div>
+			<div class="front image"><span>${parseInt(i) + 1}</span></div>
+			<div class="back image" style="background-image: url(${params[i].image})"></div>
 		</div>
 		`;
-		item.setAttribute('data-id', character.id);
+		item.setAttribute('data-id', params[i].id);
 		item.addEventListener('click', (e) => {
 			if (item.classList.contains('flipped')) return false;
 			flipCard(e.currentTarget);
