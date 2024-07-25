@@ -67,7 +67,7 @@ function unflipCards() {
   setTimeout(() => {
 		grid.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
 		resetCard();
-  }, 500);
+  }, 800);
 }
 
 function resetCard() {
