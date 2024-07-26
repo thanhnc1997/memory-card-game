@@ -1,6 +1,10 @@
 const grid = document.querySelector('.grid');
+const audio = document.querySelector('audio');
+
 let firstCard,
 		secondCard;
+
+document.body.addEventListener('click', () => audio.play());
 
 function handleData(params) {
 	if (!params) return false;

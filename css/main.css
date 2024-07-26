@@ -11,6 +11,10 @@ h1 {
 	margin-bottom: 16px
 }
 
+audio {
+	display: none;
+}
+
 .container {
 	max-width: 991px;
 	margin: 0 auto;
